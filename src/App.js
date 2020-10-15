@@ -1,26 +1,91 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, createContext } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import JobListing from './pages/JobListing';
+import { Header } from './components';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const JobsContext = createContext();
+
+const App = () => {
+    const [data, setData] = useState({ jobs:[] });
+    const [loading, setLoading] = useState();
+    const [error, setError] = useState({ error: false });
+    const [resultLength, setResultLength] = useState();
+    const [searchInput, setSearchInput] = useState('');
+    const [locationInput, setLocationInput] = useState('');
+    const [fullTime, setFullTime] = useState(false);
+    const [searchURL, setSearchURL] = useState('');
+    const [lightTheme, setLightTheme] = useState(localStorage.getItem('theme') === 'light' ? true : false);
+    const [mobileFilter, setMobileFilter] = useState(false);
+    const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions';
+
+
+    const fetchGithubAPI = async (url) => {
+        setLoading(true);
+
+        let loadMore = url.search('page');
+        let returned = await (await fetch(url));
+
+        if (returned.ok) {
+            let result = await returned.json();
+            setData(prev => ({
+                ...prev,
+                jobs: loadMore !== -1
+                    ? [...prev.jobs, ...result]
+                    : [...result]
+            }))
+            setResultLength(result.length)
+        } else {
+            setError({
+                error: true,
+                statusCode: returned.status,
+                statusText: returned.statusText
+            })  
+        }
+
+        setLoading(false)
+    }
+
+
+    useEffect(() => {
+        fetchGithubAPI(`${BASE_URL}.json`)
+    }, [])
+
+
+    return (
+        <Router>
+            <JobsContext.Provider 
+                value={{
+                    BASE_URL, 
+                    fetchGithubAPI,
+                    data, 
+                    loading, 
+                    error,
+                    lightTheme,
+                    setLightTheme,
+                    searchInput,
+                    setSearchInput,
+                    locationInput,
+                    setLocationInput,
+                    fullTime,
+                    setFullTime,
+                    searchURL, 
+                    setSearchURL, 
+                    mobileFilter,
+                    setMobileFilter,
+                    resultLength}}
+                >
+                <div className="App">
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/:jobID" component={JobListing} />
+                    </Switch>
+                </div>
+            </JobsContext.Provider>  
+        </Router>
+    )
 }
 
 export default App;
