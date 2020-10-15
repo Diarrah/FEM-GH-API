@@ -63,7 +63,6 @@ const SearchBar = () => {
                     <i 
                         className="fa fa-times" 
                         aria-hidden="true" 
-                        aria-label="Click here to close location/full-time options"
                         onClick={() => setMobileFilter(false)}
                     />
                 </div>
