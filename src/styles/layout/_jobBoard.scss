@@ -1,0 +1,27 @@
+.job__board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px 15px;
+    margin: 70px auto 90px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    @include rwd(950) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px 10px;
+    }
+
+    @include rwd(600) {
+        grid-template-columns: 1fr;
+        grid-gap: 70px 0;
+        margin: 60px auto 50px;
+
+        &.blur {
+            filter: blur(2px);
+            pointer-events: none;
+        }
+    }
+}

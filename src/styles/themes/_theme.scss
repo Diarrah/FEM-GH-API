@@ -1,0 +1,23 @@
+html[data-theme="light"] {
+    --bg: var(--gray--light);
+    --main-base: var(--white);
+    --heading: var(--blue--dark);
+    --text--main: var(--gray--dark);
+    --company-site-btn: var(--violet);
+    --border: var(--white);
+    --spinner: black;
+    --back-to-top: hsla(219, 29%, 14%, .8);
+    --error: hsla(0, 100%, 50%, .8);
+}
+
+html[data-theme="dark"] {
+    --bg: var(--midnight);
+    --main-base: var(--blue--dark);
+    --heading: var(--white);
+    --text--main: var(--gray--dark);
+    --company-site-btn: var(--white);
+    --border: var(--midnight);
+    --spinner: var(--violet);
+    --back-to-top: var(--violet);
+    --error: hsla(0, 100%, 50%, .4);
+}

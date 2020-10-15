@@ -1,0 +1,50 @@
+.spinner {
+    &--magnify {
+        width: max-content;
+        margin: 0 auto;
+
+        &.big {
+            margin-top: 50px;
+            img { transform: scale(1.5) }
+        }
+
+        &.small {
+            img { transform: scale(0.9) }
+        }
+    }
+
+    &--gh {
+        display: flex;
+        width: max-content;
+        margin: auto;
+    
+        i {
+            font-size: 18vw;
+            color: var(--spinner);
+            animation: spin 1500ms infinite linear;
+    
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                } to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    
+        &.resize {
+            i {
+                font-size: calc(50px + 5vw);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.spinner--magnify {
+
+}

@@ -1,0 +1,37 @@
+.error {
+   // border: 1px solid red;
+    width: max-content;
+    margin: 50px auto 0;
+    text-align: center;
+
+    &__msg {
+        text-align: center;
+        font-weight: 700;
+        color: var(--error);
+        margin-top: 30px;
+
+        h3 {
+            font-size: 40px;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        p { opacity: .85 }
+
+        &.visible { display: block }
+        &.hidden { display: none }
+    }
+
+    i {
+        color: var(--error);
+        font-size: calc(75px + 5vw);
+    }
+
+    .no__jobs {
+        margin-top: 15px;
+        color: var(--heading);
+
+        &.visible { display: block }
+        &.hidden { display: none }
+    }
+}

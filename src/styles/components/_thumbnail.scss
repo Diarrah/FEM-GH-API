@@ -1,0 +1,48 @@
+.job__board__thumbnail {
+    position: relative;
+    background-color: var(--main-base);
+    border-radius: 5px;
+    padding: 0 20px 20px;
+    height: 225px;
+
+    .thumbnail {
+        &__image__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            height: 70px; width: 70px;
+            border-radius: 10px;
+            transform: translateY(-50%);
+            border: 1px solid var(--border);
+            background-color: var(--main-base);
+
+            img { 
+                max-width: 100%;
+            }
+
+            .no-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%; width: 100%;
+                color: var(--heading);
+                font-size: 12px;
+            }
+        }
+
+        &__time-type, &__company {
+            font-size: .85em;
+        }
+
+        &__title { margin: 15px 0 }
+
+        &__location {
+            display: inline-block;
+            position: absolute;
+            bottom: 20px;
+            color: var(--violet);
+        }
+    }
+}

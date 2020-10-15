@@ -1,0 +1,33 @@
+.home__page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 1900px; width: 100%;
+    min-height: 100vh;
+    padding: 0 9vw;
+    margin: 0 auto;
+
+    .back-to-top {
+        position: fixed;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-base);
+        height: 60px; width: 60px;
+        border-radius: 50%;
+        border: 2px solid var(--back-to-top);
+        bottom: 50px; right: 9vw;
+
+        i {
+            font-size: 12px;
+            transform: scaleX(1.3) scaleY(2);
+            color: var(--back-to-top);
+            transition: .3s;
+        }
+
+        &:hover i { transform: scaleX(1.3) scaleY(2) translateY(3px) }
+        &:active { transform: scale(.985) }
+    }
+}

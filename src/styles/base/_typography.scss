@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 16px;
+    color: var(--text--main);
+}
+
+h1, h2, h3, h4, p > strong {
+    color: var(--heading)
+}
+
+@include rwd(600) {
+    h1 { font-size: 1.75em; }
+}
