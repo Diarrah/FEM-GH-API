@@ -62,19 +62,13 @@ const App = () => {
                     data, 
                     loading, 
                     error,
-                    lightTheme,
-                    setLightTheme,
-                    searchInput,
-                    setSearchInput,
-                    locationInput,
-                    setLocationInput,
-                    fullTime,
-                    setFullTime,
-                    searchURL, 
-                    setSearchURL, 
-                    mobileFilter,
-                    setMobileFilter,
-                    resultLength}}
+                    resultLength,
+                    lightTheme, setLightTheme,
+                    searchInput, setSearchInput,
+                    locationInput, setLocationInput,
+                    fullTime, setFullTime,
+                    searchURL, setSearchURL, 
+                    mobileFilter, setMobileFilter}}
                 >
                 <div className="App">
                     <Header />

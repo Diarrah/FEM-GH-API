@@ -14,9 +14,7 @@ const JobThumbnail = ({ logo, date, lengthTerm, company, jobTitle, location, id 
             <div className="job__board__thumbnail">
                 <div className="thumbnail__image__container">
                     { logo && (<img src={logo} alt={`${company} company logo`} />) }
-                    { !logo && (
-                        <div className="no-logo" style={{backgroundColor: color}}>n / a</div>
-                    )}
+                    { !logo && ( <div className="no-logo" style={{backgroundColor: color}}>n / a</div> )}
                 </div>
                 <p className="thumbnail__time-type">
                     <span className="thumbnail__time">{date}</span> 
