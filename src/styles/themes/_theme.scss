@@ -8,6 +8,8 @@ html[data-theme="light"] {
     --spinner: black;
     --back-to-top: hsla(219, 29%, 14%, .8);
     --error: hsla(0, 100%, 50%, .8);
+    --shadowColor: 0, 0, 0, 0.3;
+    --box-shadow: 5px 5px 15px 0 rgba(var(--shadowColor));
 }
 
 html[data-theme="dark"] {
@@ -20,4 +22,6 @@ html[data-theme="dark"] {
     --spinner: var(--violet);
     --back-to-top: var(--violet);
     --error: hsla(0, 100%, 50%, .4);
+    --shadowColor: 0, 0, 0, 1;
+    --box-shadow: 5px 5px 15px 0 rgba(var(--shadowColor));
 }
