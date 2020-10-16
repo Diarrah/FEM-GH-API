@@ -22,12 +22,9 @@
                 img { max-width: 100% }
 
                 .no-logo {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include no-logo();
                     position: relative;
-                    width: 100%; height: calc(100% + 30px);
-                    color: var(--heading);
+                    height: calc(100% + 30px);
                 }
             }
 
@@ -88,9 +85,7 @@
 
         .body {
             &__heading {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                @include display-align-justify(flex, center, space-between);
                 margin-bottom: 30px;
 
                 &__title { margin: 8px 50px 8px 0px }
@@ -173,9 +168,7 @@
     }
 
     &__footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include display-align-justify(flex, center, space-between);
         padding: 25px 35px 20px;
         background-color: var(--main-base);
 

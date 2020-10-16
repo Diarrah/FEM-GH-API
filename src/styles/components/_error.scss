@@ -1,5 +1,4 @@
 .error {
-   // border: 1px solid red;
     width: max-content;
     margin: 50px auto 0;
     text-align: center;
@@ -14,6 +13,7 @@
             font-size: 40px;
             letter-spacing: 3px;
             margin-bottom: 5px;
+            color: var(--error);
         }
 
         p { opacity: .85 }

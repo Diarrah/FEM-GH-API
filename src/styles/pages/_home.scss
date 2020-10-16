@@ -1,24 +1,20 @@
 .home__page {
-    display: flex;
+    @include display-position-align(flex, relative, center);
     flex-direction: column;
-    align-items: center;
-    position: relative;
     max-width: 1900px; width: 100%;
     min-height: 100vh;
     padding: 0 9vw;
     margin: 0 auto;
 
     .back-to-top {
-        position: fixed;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display-position-align(flex, fixed, center);
+        justify-content: center;        
         background-color: var(--main-base);
         height: 60px; width: 60px;
         border-radius: 50%;
         border: 2px solid var(--back-to-top);
         bottom: 50px; right: 9vw;
+        cursor: pointer;
 
         i {
             font-size: 12px;

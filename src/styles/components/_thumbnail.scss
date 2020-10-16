@@ -7,10 +7,8 @@
 
     .thumbnail {
         &__image__container {
-            display: flex;
-            align-items: center;
+            @include display-position-align(flex, relative, center);
             justify-content: center;
-            position: relative;
             overflow: hidden;
             height: 70px; width: 70px;
             border-radius: 10px;
@@ -23,11 +21,8 @@
             }
 
             .no-logo {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%; width: 100%;
-                color: var(--heading);
+                @include no-logo();
+                height: 100%; 
                 font-size: 12px;
             }
         }
@@ -39,8 +34,7 @@
         &__title { margin: 15px 0 }
 
         &__location {
-            display: inline-block;
-            position: absolute;
+            @include display-position(inline-block, absolute);
             bottom: 20px;
             color: var(--violet);
         }

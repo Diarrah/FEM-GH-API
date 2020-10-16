@@ -1,14 +1,11 @@
 .search__bar {
-    display: flex;
-    align-items: center;
-    position: relative;
+    @include display-position-align(flex, relative, center);
     background-color: var(--main-base);
     color: var(--heading);
-    transform: translateY(-50%);
     padding: 0 10px;
     border-radius: 5px;
-    width: 100%;
-    z-index: 5;
+    width: 100%; height: 56px;
+    z-index: 5; top: -28px;
 
     .form__control {
         input {
@@ -105,8 +102,7 @@
             padding-right: 25px;
 
             button {
-                position: absolute;
-                display: flex;
+                @include display-position(flex, absolute);
                 background-color: transparent;
                 cursor: pointer;
                 right: 12px; top: 50%;
@@ -124,16 +120,15 @@
         }
 
         &--inner {
-            display: none;
-            position: absolute;
+            @include display-position(none, fixed);
             flex-direction: column;
             overflow: hidden;
             padding: 0 0 20px;
             border-radius: 5px;
-            top: 100px; left: 0;
+            top: 250px; left: 9vw;
             background-color: var(--main-base);
-            width: 100%;
-            box-shadow: 1px 1px 3px rgba(black, .1);
+            width: calc(100% - 18vw);
+            box-shadow: var(--box-shadow);
 
             &.visible { display: flex }
 
@@ -145,8 +140,7 @@
                 padding: 10px 35px 0 20px;
 
                 i {
-                    position: absolute;
-                    display: block;
+                    @include display-position(block, absolute);
                     top: 50%; right: 30px;
                     transform: translateY(-50%);
                     cursor: pointer;

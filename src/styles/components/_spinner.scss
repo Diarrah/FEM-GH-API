@@ -8,9 +8,7 @@
             img { transform: scale(1.5) }
         }
 
-        &.small {
-            img { transform: scale(0.9) }
-        }
+        &.small img { transform: scale(0.9) }
     }
 
     &--gh {
@@ -32,19 +30,6 @@
             }
         }
     
-        &.resize {
-            i {
-                font-size: calc(50px + 5vw);
-            }
-        }
+        &.resize i { font-size: calc(50px + 5vw) }
     }
-}
-
-
-
-
-
-
-.spinner--magnify {
-
 }

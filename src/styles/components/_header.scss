@@ -1,7 +1,5 @@
 .header {
-    display: flex;
-    position: relative;
-    align-items: center;
+    @include display-position-align(flex, relative, center);
     min-height: 140px;
 
     &__backgrounds {
@@ -18,9 +16,7 @@
     }
 
     &__inner {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
+        @include display-position-justify(flex, absolute, space-between);
         width: 100%;
         padding: 0 9vw;
 
