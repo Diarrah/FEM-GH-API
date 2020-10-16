@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { JobsContext } from '../App';
-import { timeDifference } from '../helpers/timeDiffererence';
 import { JobBoard, JobThumbnail, SearchBar, GHSpinner, MagnifyingGlass, Error } from '../components';
+import { timeDifference } from '../helpers/timeDiffererence';
 
 const Home = () => {
     const { data: {jobs}, BASE_URL, loading, error, resultLength, searchURL, fetchGithubAPI, mobileFilter } = useContext(JobsContext);
@@ -42,8 +42,8 @@ const Home = () => {
     return (
         <div className="home__page">
             <SearchBar />
-            {loading && !searchURL && (<GHSpinner initialSearch />)}
-            {loading && searchURL && (<MagnifyingGlass />)}
+            {loading && !searchURL && !mobileFilter && (<GHSpinner initialSearch />)}
+            {loading && searchURL && !mobileFilter && (<MagnifyingGlass />)}
             {error.error && (<Error apiError />)}
             {!error.error && !loading && searchURL && jobs.length === 0 && (<Error noJobs />)}
             {jobs && !error.error && (
