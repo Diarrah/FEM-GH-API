@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { JobsContext } from '../App';
-import { timeDifference } from '../helpers/timeDiffererence';
 import { Error, GHSpinner } from '../components';
+import { timeDifference } from '../helpers/timeDiffererence';
 
 const JobListing = ({ match }) => {
     const { data: {jobs}, loading, error } = useContext(JobsContext);
