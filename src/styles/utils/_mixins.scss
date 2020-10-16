@@ -3,3 +3,34 @@
         @content;
     }
 }
+
+@mixin display-position($display, $position) {
+    display: $display;
+    position: $position;
+}
+
+@mixin display-position-justify($display, $position, $justify) {
+    display: $display;
+    position: $position;
+    justify-content: $justify;
+}
+
+@mixin display-position-align($display, $position, $align) {
+    display: $display;
+    position: $position;
+    align-items: $align;
+}
+
+@mixin display-align-justify($display, $align, $justify) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin no-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--heading);
+    width: 100%;
+}
