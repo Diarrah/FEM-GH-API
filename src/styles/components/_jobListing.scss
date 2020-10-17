@@ -29,10 +29,8 @@
             }
 
             &__textbox {
-                display: flex;
+                @include display-align-justify(flex, center, space-between);
                 flex: 1;
-                justify-content: space-between;
-                align-items: center;
                 padding: 0 50px;
 
                 &__heading { margin-bottom: 8px }
@@ -121,10 +119,9 @@
                         &:last-of-type { margin-bottom: 0 }
 
                         &::before {
+                            @include display-position(inline-block, absolute);
                             content: "\2022";
                             color: var(--violet);
-                            display: inline-block;
-                            position: absolute;
                             width: 1em;
                             margin-left: -1em;
                         }
