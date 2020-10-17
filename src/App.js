@@ -43,15 +43,17 @@ const App = () => {
                 statusText: returned.statusText
             })  
         }
-
         setLoading(false)
     }
 
-
-    useEffect(() => {
-        fetchGithubAPI(`${BASE_URL}.json`)
+    useEffect(() => {     
+        if (!sessionStorage.getItem('search URL')) {
+            fetchGithubAPI(`${BASE_URL}.json`)
+        } else {
+            fetchGithubAPI(sessionStorage.getItem('search URL'))
+            setSearchURL(sessionStorage.getItem('search URL'))
+        }
     }, [])
-
 
     return (
         <Router>
