@@ -91,9 +91,8 @@
                 &__location { color: var(--violet) }
 
                 .btn {
+                    @include display-align-justify(flex, center, center);
                     text-decoration: none;
-                    display: flex;
-                    align-items: center;
                 }
             }
 
@@ -176,9 +175,8 @@
         }
 
         .btn {
+            @include display-align-justify(flex, center, center);
             text-decoration: none;
-            display: flex;
-            align-items: center;
         }
     }
 
