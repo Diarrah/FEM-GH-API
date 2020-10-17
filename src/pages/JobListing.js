@@ -63,11 +63,11 @@ const JobListing = ({ match }) => {
                             <h2 className="body__heading__title">{listing.title}</h2>
                             <p className="body__heading__location">{listing.location}</p>
                         </div>
-                        <a className="body__heading__redirect btn" href="#cta">Apply Now</a>
+                        <a className="body__heading__redirect btn" href={applyNowLink(listing.how_to_apply)} target="_blank" rel="noopener noreferrer">Apply Now</a>
                     </div>
                     <div className="body__main" dangerouslySetInnerHTML={{__html: listing.description}} />
                 </div>
-                <div className="job__listing__cta" id="cta">
+                <div className="job__listing__cta">
                     <h3 className="cta__heading">How to Apply</h3><br />
                     <p className="cta__body" dangerouslySetInnerHTML={{__html: listing.how_to_apply}} />
                 </div>
