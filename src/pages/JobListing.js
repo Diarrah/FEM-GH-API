@@ -23,6 +23,11 @@ const JobListing = ({ match }) => {
         return valid.test(url)
     }
 
+    const applyNowLink = link => {
+        let valid = /<a\s+(?:[^>]*?\s+)?href="([^"]*)"/;
+        return link.match(valid)[1];
+    }
+
     return (
         <>
         {loading && (<GHSpinner />)}
@@ -71,7 +76,9 @@ const JobListing = ({ match }) => {
                         <h4 className="footer__textbox__position">{listing.title}</h4>
                         <small className="footer__textbox__company">{listing.company}</small>
                     </div>
-                    <button className="footer__btn btn">Apply Now</button>
+                    <a className="footer__btn btn" href={applyNowLink(listing.how_to_apply)} rel="noopener noreferrer" target="_blank">
+                        Apply Now
+                    </a>
                 </footer>
             </div>
         )}
