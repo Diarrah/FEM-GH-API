@@ -32,9 +32,7 @@ const JobListing = ({ match }) => {
                 <div className="job__listing__header">
                     <div className="header__image__container">
                         {listing.company_logo && (<img src={listing.company_logo} alt={`${listing.company} company logo`} />)}
-                        {!listing.company_logo && (
-                            <div className="no-logo" style={{backgroundColor: color}}>n / a</div>
-                        )}
+                        {!listing.company_logo && ( <div className="no-logo" style={{backgroundColor: color}}>n / a</div> )}
                     </div>
                     <div className="header__textbox">
                         <div className="textbox__inner">

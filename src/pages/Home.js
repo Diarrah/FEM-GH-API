@@ -35,6 +35,7 @@ const Home = () => {
             : `${BASE_URL}.json?page=${anotherPage}`
 
         fetchGithubAPI(endpoint)       
+        sessionStorage.setItem('search URL', endpoint)
     }
 
     useWindowSize()
