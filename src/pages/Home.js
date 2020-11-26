@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import { JobsContext } from '../App';
 import { JobBoard, JobThumbnail, SearchBar, GHSpinner, MagnifyingGlass, Error } from '../components';
 import { timeDifference } from '../helpers/timeDiffererence';
+import arrow from '../images/up-arrow.svg';
 
 const Home = () => {
     const { data: {jobs}, BASE_URL, loading, error, resultLength, searchURL, fetchGithubAPI, mobileFilter } = useContext(JobsContext);
@@ -75,7 +76,7 @@ const Home = () => {
                         className="back-to-top"
                         aria-label="Button to scroll back to top of page"
                         onClick={() => window.scrollTo(0, 0)}>
-                            <i className="fas fa-long-arrow-alt-up" aria-hidden="true" />
+                            <img src={arrow} alt="" />
                     </button>
                 )}
                 </>
