@@ -16,8 +16,8 @@
         width: max-content;
         margin: auto;
     
-        i {
-            font-size: 18vw;
+        img {
+            width: 18vw; height: 18vw;
             color: var(--spinner);
             animation: spin 1500ms infinite linear;
     
@@ -30,6 +30,9 @@
             }
         }
     
-        &.resize i { font-size: calc(50px + 5vw) }
+        &.resize img { 
+            width: calc(50px + 5vw); 
+            height: calc(50px + 5vw); 
+        }
     }
 }

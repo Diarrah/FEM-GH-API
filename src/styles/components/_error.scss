@@ -22,9 +22,9 @@
         &.hidden { display: none }
     }
 
-    i {
+    img {
         color: var(--error);
-        font-size: calc(75px + 5vw);
+        width: calc(75px + 5vw);
     }
 
     .no__jobs {
