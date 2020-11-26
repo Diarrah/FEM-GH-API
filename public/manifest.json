@@ -1,0 +1,28 @@
+{
+    "name": "Github Jobs",
+    "short_name": "Github Jobs",
+    "description": "App displaying all jobs from jobs.github.com",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f5f5f5",
+    "theme_color": "#5662E1",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icons/logo-64.png",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons/logo-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/logo-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
