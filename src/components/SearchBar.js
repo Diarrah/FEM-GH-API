@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { JobsContext } from '../App';
 import check from '../images/desktop/icon-check.svg';
+import close from '../images/mobile/close.svg';
 
 const SearchBar = () => {
     const { BASE_URL, fetchGithubAPI, searchInput, setSearchInput, locationInput, setLocationInput, fullTime, setFullTime, setSearchURL, mobileFilter, setMobileFilter} = useContext(JobsContext);
@@ -62,10 +63,10 @@ const SearchBar = () => {
                         onChange={e => setLocationInput(e.target.value)}
                         value={locationInput}
                     />
-                    <i 
-                        className="fa fa-times" 
-                        aria-hidden="true" 
+                    <img 
+                        src={close}
                         onClick={() => setMobileFilter(false)}
+                        alt=""
                     />
                 </div>
                 <div className="search__bar__full-time form__control">
