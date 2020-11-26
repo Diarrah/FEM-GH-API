@@ -72,7 +72,7 @@ const SearchBar = () => {
                     <span className={`checkbox ${fullTime ? 'checked' : ''}`} onClick={() => setFullTime(!fullTime)}>
                         <img src={check} alt="Checkmark" />
                     </span>
-                    <small onClick={() => setFullTime(!fullTime)}>Full Time <span>Only</span></small>
+                    <small onClick={() => setFullTime(!fullTime)}>Full Time</small>
                 </div>
                 <button 
                     className="search__inner__btn btn" 
