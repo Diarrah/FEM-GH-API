@@ -50,7 +50,7 @@
             background-size: 12px;
             width: 65%;
 
-            i { display: none }
+            img { display: none }
         }    
             
         .search__bar__full-time {
@@ -139,13 +139,12 @@
                 background-position: 25px 55%;
                 padding: 10px 35px 0 20px;
 
-                i {
+                img {
                     @include display-position(block, absolute);
                     top: 50%; right: 30px;
                     transform: translateY(-50%);
                     cursor: pointer;
-                    color: var(--company-site-btn);
-                    font-size: 14px;
+                    width: 18px; height: 18px;
                 }
             }
 
