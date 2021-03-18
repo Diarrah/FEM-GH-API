@@ -18,7 +18,7 @@ const App = () => {
     const [searchURL, setSearchURL] = useState('');
     const [lightTheme, setLightTheme] = useState(localStorage.getItem('theme') === 'light' ? true : false);
     const [mobileFilter, setMobileFilter] = useState(false);
-    const BASE_URL = 'https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions';
+    const BASE_URL = 'https://cors.bridged.cc/https://jobs.github.com/positions';
 
 
     const fetchGithubAPI = async (url) => {
